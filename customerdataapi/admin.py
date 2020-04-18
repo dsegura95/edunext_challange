@@ -10,3 +10,4 @@ from customerdataapi.models import CustomerData
 
 
 admin.site.register(CustomerData)
+
