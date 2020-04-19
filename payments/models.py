@@ -1,7 +1,9 @@
+"""
+Models for a Payment Module
+"""
 from django.db import models
 
-# Create your models here.
-
+# Model for the PayPal method based on the IPN message
 class PaypalPayment(models.Model):
     protection_eligibility = models.CharField(max_length=128)
     address_status = models.CharField(max_length=128)
@@ -16,5 +18,6 @@ class PaypalPayment(models.Model):
     payment_gross = models.DecimalField(max_digits=6, decimal_places=2)
     shipping = models.DecimalField(max_digits=6, decimal_places=2)
 
+    # Setting display to show in the Django admin site
     def __str__(self):
         return "Payment with id <{}>".format(self.id)

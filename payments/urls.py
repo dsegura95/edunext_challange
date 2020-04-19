@@ -1,3 +1,7 @@
+"""
+URL's for Payments App Service
+"""
+
 from django.conf.urls import url, include
 from payments import views
 from django.views.generic import TemplateView
