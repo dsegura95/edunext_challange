@@ -45,7 +45,7 @@ The new application is called *payments*. A model was created to store (own deci
 
 An API service was created with Django Rest Framework, where these stored IPN messages could be obtained and in turn also be received.
 
-When receiving an IPN message through a POST request, in addition to being stored, the necessary information is extracted and then updated in the customer database, according to the criteria set forth above.
+When receiving an IPN message through a POST request, in addition to being stored, the necessary information is extracted and sent to the customer API through a PUT request that was implemented in the app that contains it. Then when received by the customer API, the information to be updated is obtained and changed in the database.
 
 ---
 
