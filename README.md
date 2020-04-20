@@ -36,8 +36,8 @@ Imagine that what you just launched is the service where we keep information of 
 Now leave this running and move to the step 002 of the challenge. If you mess up your work later, you can come back and use `make erase` to clear everything again. Then start over at the step 2 of the list.
 
 
-## Solution
-## ===============
+Solution
+===============
 
 It was decided to create another new application for a modularization of functionalities with the future in mind.
 
@@ -46,6 +46,7 @@ The new application is called *payments*. A model was created to store (own deci
 An API service was created with Django Rest Framework, where these stored IPN messages could be obtained and in turn also be received.
 
 When receiving an IPN message through a POST request, in addition to being stored, the necessary information is extracted and then updated in the customer database, according to the criteria set forth above.
+
 ---
 
 [^1]:
