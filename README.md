@@ -47,6 +47,14 @@ An API service was created with Django Rest Framework, where these stored IPN me
 
 When receiving an IPN message through a POST request, in addition to being stored, the necessary information is extracted and sent to the customer API through a PUT request that was implemented in the app that contains it. Then when received by the customer API, the information to be updated is obtained and changed in the database.
 
+The payment API was tested, 5 cases were generated and approved. In general, the cases tested were:
+
++ Test 1: Verify if the payment_status is not Completed, the account is changed to 'free'
++ Test 2: Verify a customer's account change to 'premium'
++ Test 3: Verify only the change of the last payment day on a 'premium' to 'premium payment'
++ Test 4: Verify a bad request when sending the IPN message without one of the required fields
++ Test 5: Verify a customer's account change to 'basic'
+
 ---
 
 [^1]:

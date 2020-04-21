@@ -29,7 +29,6 @@ class PaymentPaypalView(APIView):
             customer = URL_API_CUSTOMER_DATA + ipn_data.get('payer_id')[0] + '/'
             instance = requests.get(customer)
             instance_json = instance.json()
-            #print(type(instance_json['data']['ENABLED_FEATURES']))
             if ipn_data.get('payment_status')[0] == "Completed": 
                 # It is verified if the payment is completed
                 # and the purchased plan is obtained.
